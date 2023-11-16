@@ -5,6 +5,19 @@ function obtenerMayor(x, y) {
    // Retornar el número más grande.
    // Si son iguales, retornar cualquiera de los dos.
    // Tu código:
+   switch (Number.isInteger(x, y)) {
+      case x < y:
+         return y;
+         breack;
+      case x > y:
+         return x;
+         breack
+      case X === y:
+         return x;
+         breack
+      default:
+         breack
+   }
 }
 
 function mayoriaDeEdad(edad) {
@@ -12,6 +25,16 @@ function mayoriaDeEdad(edad) {
    // Si tiene 18 años ó más debe retornar el string: "Allowed".
    // Caso contrario: "Not allowed".
    // Tu código:
+   switch (Number.isInteger(edad)){
+      case edad >= 18:
+         return "Allowed";
+         breack
+      case edad < 18:
+         return "Not allowed";
+         break
+         default:
+            breack
+   }
 }
 
 function conection(status) {
@@ -21,6 +44,18 @@ function conection(status) {
    // De lo contrario, presumimos que el usuario está "Offline".
    // Retornar el estado de conexión del usuario.
    // Tu código:
+   switch (status >=1 ){
+      case status=== 1:
+         return "Online";
+         breack
+      case  status=== 2:
+         return "Away"
+         breack
+      default:
+         return "Offline";
+         breack
+   }
+
 }
 
 function saludo(idioma) {
@@ -30,6 +65,20 @@ function saludo(idioma) {
    // Si "idioma" es "ingles", devuelve "Hello!".
    // Si "idioma" no es ninguno de los anteriores o es `undefined` devuelve "Hola!".
    // Tu código:
+   switch (idioma === "aleman" || idioma === "mandarin" || idioma === "ingles"){
+      case idioma === "aleman":
+         return "Guten Tag!";
+         breack
+      case idioma === "mandarin":
+         return "Ni Hao!";
+          breack
+      case idioma === "ingles":
+         return "Hello!";
+         breack
+      default:
+         return "Hola!";
+         breack
+      }
 }
 
 function colors(color) {
