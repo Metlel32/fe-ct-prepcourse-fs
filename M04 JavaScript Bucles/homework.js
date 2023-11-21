@@ -5,20 +5,12 @@ function obtenerMayor(x, y) {
    // Retornar el número más grande.
    // Si son iguales, retornar cualquiera de los dos.
    // Tu código:
-   switch (Number.isInteger(x, y)) {
-      case x < y:
-         return y;
-         breack;
-      case x > y:
-         return x;
-         breack
-      case X === y:
-         return x ;
-         breack
-         case X === y:
-            return y ;
-      default:
-      break
+   if (x > y ){
+      return x;
+   }else if (x < y){
+      return y;
+   }else if (x ===y ){
+      return x ;
    }
 }
 
@@ -27,15 +19,10 @@ function mayoriaDeEdad(edad) {
    // Si tiene 18 años ó más debe retornar el string: "Allowed".
    // Caso contrario: "Not allowed".
    // Tu código:
-   switch (Number.isInteger(edad)){
-      case edad >= 18:
-         return "Allowed";
-         breack
-      case edad < 18:
-         return "Not allowed";
-         break
-         default:
-            breack
+   if ( edad>= 18 ){
+      return "Allowed";
+   }else{
+      return "Not allowed";
    }
 }
 
@@ -46,16 +33,14 @@ function conection(status) {
    // De lo contrario, presumimos que el usuario está "Offline".
    // Retornar el estado de conexión del usuario.
    // Tu código:
-   switch (status >=1 ){
-      case status=== 1:
+   switch (status){
+      case 1:
          return "Online";
-         breack
-      case  status=== 2:
-         return "Away"
-         breack
+      case  2:
+         return "Away";
       default:
          return "Offline";
-         breack
+         break
    }
 
 }
@@ -133,7 +118,7 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna false.
    // Tu código:
-
+   return num % 1 === 0;
 }
 
 function fizzBuzz(num) {
@@ -178,12 +163,11 @@ function esPrimo(num) {
    // Tu código:
    if (num < 2) return false;
    for (i = 2; i < num; i++){
-      if (num % num === 0 && num % 1 === 0){
-         return true;
+      if (num % i === 0 ){
+         return false;
       }
-      return false
    }
-
+   return true
 }
 
 function esVerdadero(valor) {
