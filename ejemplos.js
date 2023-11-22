@@ -33,3 +33,45 @@ function mostrar (...args){
 }
 
 mostrar(1, 2, 3, 4, 5, 6, 7)
+
+
+
+// clase 4 21/11/2023
+
+// objetos
+var nombreObjeto = {
+    estudiante1 : "juan",
+    estudiante2 : "alberto",
+    edadEstudiante2 : 21,
+    edadEstudiante1 : 30
+}
+
+//dot notation
+console.log(nombreObjeto.estudiante1)
+
+// bracket notation
+console.log(nombreObjeto["edadEstudiante1"]);
+
+// bracket notation con variable
+var caso = "estudiante2"
+console.log(nombreObjeto[caso])
+
+//agregar nuevo dato
+nombreObjeto.nuevoDato = "saludos";
+
+// borrar un  dato
+delete nombreObjeto.nuevoDato
+
+
+
+// uso del this de los objetos
+
+var nuevoObjeto2 = {
+    name : "juan",
+    imprimirNombre: function(){
+        console.log("el objeto tien e el this", this)
+        return this.name
+    }
+}
+
+console.log(nuevoObjeto2)
