@@ -53,9 +53,7 @@ function dePalabrasAFrase(palabras) {
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código
    // el acc o acumuladro es la variable que va recorriendo y el acumulador es la pocision del array que va avanzando
-   palabras.reduce(function(acc, ele){
-      return acc + " ";
-   })
+   return palabras.join(" ");
 }
 
 function arrayContiene(array, elemento) {
@@ -70,7 +68,7 @@ function agregarNumeros(arrayOfNums) {
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
    return arrayOfNums.reduce(function(acu, ele){
-      acu += acu + ele;
+      acu = acu + ele;
       return acu;
    })
    
@@ -82,10 +80,11 @@ function promedioResultadosTest(resultadosTest) {
    // Tu código:
    var result = 0
    var arrayLongitud = resultadosTest.length
+   var total = 0
    while (result < resultadosTest.length){
-      result = result + resultadosTest.pop()
+      total =  total + resultadosTest.pop() 
    }
-   return result / arrayLongitud;
+   return total / arrayLongitud;
 }
 
 function numeroMasGrande(arrayOfNums) {
@@ -100,7 +99,16 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-
+   if (arguments.length < 0) {
+      return 0;
+   }else if(arguments.length === 0 ){
+      return arguments;
+   }else{
+      var acumulador = arguments.reduce(function(ac, ele){
+         var total = ac * ele
+     })
+     return total
+   }
 }
 
 function cuentoElementos(array) {
